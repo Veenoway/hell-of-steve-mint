@@ -24,7 +24,7 @@ export default async function RootLayout({
   const cookies = (await headers()).get("cookie");
   return (
     <html lang="en-US">
-      <body className={`${poppins} `}>
+      <body className={poppins.className}>
         {/* <Analytics /> */}
         <ContextProvider cookies={cookies}>
           <Header />

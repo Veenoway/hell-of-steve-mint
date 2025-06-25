@@ -35,7 +35,7 @@ export function UserNFTs() {
   if (!address) {
     return (
       <div className="mt-10">
-        <h2 className="text-2xl sm:text-4xl text-white mb-4">MY NFTS (0)</h2>
+        <h2 className="text-3xl sm:text-5xl text-white mb-4">MY NFTS (0)</h2>
         <div className="h-48 flex items-center justify-center">
           <p className="text-[rgba(255,255,255,1)] uppercase text-xl sm:text-3xl">
             Connect your wallet to see your NFTs
@@ -47,8 +47,8 @@ export function UserNFTs() {
 
   return (
     <div className="mt-5 sm:mt-10">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl sm:text-4xl text-white uppercase">
+      <div className="flex justify-between items-center mb-10">
+        <h2 className="text-3xl sm:text-5xl text-white uppercase">
           MY NFTS ({userNFTs.length || 0})
         </h2>
         <div className="flex items-center gap-3">

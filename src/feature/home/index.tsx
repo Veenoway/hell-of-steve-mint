@@ -2,7 +2,6 @@
 import { WalletModal } from "@/components/connect-modal";
 import { UserNFTs } from "@/components/UserNFTs";
 import { useNFT } from "@/hooks/useNFTInteraction";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useAccount, useSwitchChain } from "wagmi";
 
@@ -255,42 +254,31 @@ export function NFT() {
 
   return (
     <>
-      <main
-        className="min-h-screen w-screen text-white flex flex-col sm:pt-0 transition-all duration-1000 ease-in-out"
-        style={{
-          background: "url('/beholdak/background.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <main className="min-h-screen w-screen text-white flex flex-col sm:pt-0 transition-all duration-1000 ease-in-out bg-[url('/background.png')] bg-cover bg-center bg-no-repeat">
+        {/* <img
+          src="/buble.png"
+          alt="Spikynads Chad logo"
+          className="h-full w-full absolute top-0 left-0"
+        /> */}
         <div className="max-w-[1100px] w-[90%] mx-auto mt-[40px] lg:mt-[40px] flex lg:flex-row flex-col items-center lg:justify-center">
-          <div className="max-w-[800px] flex flex-col lg:items-start items-center text-white font-medium text-xl lg:mt-0 mt-10">
+          <div className="max-w-[800px] w-full flex flex-col lg:items-start items-center text-white font-medium text-xl lg:mt-0 mt-10">
             <img
-              src="/beholdak/TentacleOfBeholdak.png"
+              src="/logo.png"
               alt="Spikynads Chad logo"
               className="h-[200px] sm:h-[350px] mx-auto"
             />
 
-            <div className="w-full p-5 sm:p-10 sm:border-2 rounded-xl sm:border-[#7151EB] relative">
+            <div className="w-full relative">
               <img
-                src="/beholdak/Billholdak.png"
+                src="/steve.png"
                 alt="Spikynads Chad logo"
-                className="h-[100px] sm:h-[250px] mx-auto absolute sm:-left-[120px] -left-[0px] sm:-top-[120px] -top-[50px]"
+                className="h-[100px] sm:h-[500px] mx-auto absolute sm:-left-[400px] -left-[0px] sm:-top-[120px] -top-[50px]"
               />
-              <p className="text-white/90 text-base text-center sm:text-left sm:text-lg font-normal mb-4">
-                Beholdak is a forgotten creature from ancient times. Each of its
-                tentacles has its own consciousness, distinct personality, and
-                unique abilities. <br /> <br />A true collective mind within a
-                single body, it functions as a polyphonic entity: some tentacles
-                are strategic, others impulsive, mystical, or completely
-                foolish. Together, they form an unpredictable and brilliant
-                being.
-              </p>
+
               <div className="w-full flex flex-col items-center justify-center mt-5 sm:mt-10">
                 {address && isWrongNetwork ? (
                   <button
-                    className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-3xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
+                    className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
                     onClick={handleSwitchNetwork}
                   >
                     Switch Network
@@ -301,7 +289,7 @@ export function NFT() {
                   <WalletModal open={open} setOpen={setOpen}>
                     <button
                       onClick={() => setOpen(true)}
-                      className="bg-brandColor w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-3xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
+                      className="bg-brandColor w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
                     >
                       Connect Wallet
                     </button>
@@ -311,7 +299,7 @@ export function NFT() {
                 {address && !isWrongNetwork && (
                   <div className="flex items-center flex-col lg:flex-row gap-3 mt-3 w-full mb-0 uppercase">
                     {isSoldOut ? (
-                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-3xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
+                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
                         Sold out!
                       </button>
                     ) : userCanMint ? (
@@ -327,7 +315,7 @@ export function NFT() {
                             ? "bg-[#241F6F]"
                             : "bg-[#858585] cursor-not-allowed"
                         } 
-                         w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-3xl uppercase text-white transition-all duration-300 ease-in-out mt-3
+                         w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3
                      
                       `}
                           onClick={handleMint}
@@ -358,7 +346,7 @@ export function NFT() {
                         </button>
                       </div>
                     ) : (
-                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-3xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
+                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
                         MINTED
                       </button>
                     )}
@@ -368,7 +356,7 @@ export function NFT() {
                 <div className="mt-5 p-4 w-full sm:w-[60%] bg-[#241f6f32] rounded-md">
                   <div className="flex justify-between items-center mb-3">
                     <div
-                      className={`pb-1 rounded-full flex items-center text-base sm:text-xl`}
+                      className={`pb-1 rounded-full flex items-center text-lg sm:text-2xl`}
                     >
                       <div
                         className={`${
@@ -390,10 +378,10 @@ export function NFT() {
                     </div>
                     {address && (
                       <div className="text-center">
-                        <span className="text-base sm:text-xl text-gray-300 uppercase">
+                        <span className="text-lg sm:text-2xl text-gray-300 uppercase">
                           mints:
                         </span>
-                        <span className="ml-2 text-base sm:text-xl text-white font-medium">
+                        <span className="ml-2 text-lg sm:text-2xl text-white font-medium">
                           {userMints}/{maxMintsPerAddress}
                         </span>
                       </div>
@@ -418,16 +406,16 @@ export function NFT() {
                       ></div>
                     </div>
                     <div className="flex justify-between items-center mt-2">
-                      <span className="text-base sm:text-lg text-gray-200 uppercase">
+                      <span className="text-lg sm:text-2xl text-gray-200 uppercase">
                         Total minted
                       </span>
-                      <span className="text-base sm:text-lg font-medium text-white">
+                      <span className="text-lg sm:text-2xl font-medium text-white">
                         {totalMinted || 0} / {maxSupply || 377}
                       </span>
                     </div>
                     <div className="h-0.5 w-full bg-[#7051eb38] my-4" />
                     <div className="flex items-center justify-between">
-                      <p className="text-white font-medium text-base sm:text-lg mx-auto sm:text-[20px] mb-4 uppercase">
+                      <p className="text-white font-medium text-lg sm:text-2xl mx-auto mb-4 uppercase">
                         Current phase:{" "}
                         <span className="text-yellow-500">
                           {mintPhaseInfo?.currentPhase ===
@@ -457,31 +445,11 @@ export function NFT() {
         <div className="w-[90%] max-w-[1100px] sm:mt-10 mt-5 mx-auto mb-[100px]">
           <UserNFTs />
         </div>
-        <div className="h-[2px] w-[90%] max-w-[1100px] mx-auto bg-[rgba(255,255,255,0.1)]" />
-        <p className="text-lg mt-[70px] mb-10 uppercase text-center mx-auto max-w-[90%]">
-          Thanks to{" "}
-          <span className="text-green-600">
-            <Link
-              href="https://x.com/Novee_VeenoX"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Novee
-            </Link>
-          </span>{" "}
-          for all technical part
-        </p>
-        <Link
-          href="https://x.com/papayouleouf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/beholdak/papayou-link.png"
-            alt="Papayou link"
-            className="w-[100px] mx-auto mb-[70px]"
-          />
-        </Link>
+        <img
+          src="/thanks.png"
+          alt="Papayou link"
+          className="max-w-[700px] mx-auto w-full mb-[120px]"
+        />
       </main>
     </>
   );
