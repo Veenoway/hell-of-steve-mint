@@ -56,9 +56,9 @@ export function UserNFTs() {
             onClick={handleRefresh}
             className={`${
               isLoadingNFTs
-                ? "bg-[rgba(255,255,255,0.1)] cursor-not-allowed"
-                : "bg-brandColor hover:bg-[#6C07D1]"
-            } px-6 py-2 rounded text-base sm:text-xl flex uppercase transition-all duration-300 ease-in-out items-center gap-2`}
+                ? "bg-[rgba(0,0,0,0.7)] cursor-not-allowed"
+                : "bg-black "
+            } px-6 py-2 rounded text-xl sm:text-2xl flex uppercase transition-all duration-300 ease-in-out items-center gap-2`}
             disabled={isLoadingNFTs}
           >
             {isLoadingNFTs && (
@@ -102,16 +102,15 @@ export function UserNFTs() {
                 key={`nft-${tokenId}`}
                 className="relative transition-all duration-500 rounded-lg transform hover:scale-105"
               >
-                <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-md rounded-lg overflow-hidden">
+                <div className="bg-[rgba(0,0,0,0.4)] backdrop-blur-md rounded-lg overflow-hidden">
                   <div className="relative w-full h-auto">
                     <img
                       src={nft.normalizedImage}
                       alt={nftName}
                       width={400}
                       height={262}
-                      className="w-full h-[180px] sm:h-[230px] object-cover"
+                      className="w-full h-[180px] sm:h-[260px] object-cover"
                     />
-
                     {!nft.metadata && (
                       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                         <div className="text-yellow-300 animate-pulse">

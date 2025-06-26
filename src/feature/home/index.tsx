@@ -289,7 +289,7 @@ export function NFT() {
                   <WalletModal open={open} setOpen={setOpen}>
                     <button
                       onClick={() => setOpen(true)}
-                      className="bg-brandColor w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
+                      className="bg-[#836EF9] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
                     >
                       Connect Wallet
                     </button>
@@ -353,7 +353,7 @@ export function NFT() {
                   </div>
                 )}
 
-                <div className="mt-5 p-4 w-full sm:w-[60%] bg-[#241f6f32] rounded-md">
+                <div className="mt-5 p-4 w-full sm:w-[60%] bg-black/40 rounded-md">
                   <div className="flex justify-between items-center mb-3">
                     <div
                       className={`pb-1 rounded-full flex items-center text-lg sm:text-2xl`}
@@ -397,7 +397,7 @@ export function NFT() {
                       }}
                     >
                       <div
-                        className="h-full bg-[#2921a3] transition-all duration-500"
+                        className="h-full bg-[#21a325] transition-all duration-500"
                         style={{
                           width: `${
                             (totalMinted / (maxSupply || 1000)) * 100
@@ -413,9 +413,9 @@ export function NFT() {
                         {totalMinted || 0} / {maxSupply || 377}
                       </span>
                     </div>
-                    <div className="h-0.5 w-full bg-[#7051eb38] my-4" />
+                    <div className="h-0.5 w-full bg-[#62626238] my-4" />
                     <div className="flex items-center justify-between">
-                      <p className="text-white font-medium text-lg sm:text-2xl mx-auto mb-4 uppercase">
+                      <p className="text-white font-medium text-xl sm:text-3xl mx-auto mb-2 uppercase">
                         Current phase:{" "}
                         <span className="text-yellow-500">
                           {mintPhaseInfo?.currentPhase ===

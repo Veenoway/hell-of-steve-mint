@@ -47,8 +47,8 @@ export function WalletConnection() {
     return (
       <button
         onClick={handleSwitchNetwork}
-        className="bg-brandColor
-          flex items-center rounded uppercase w-fit h-[40px] sm:h-[50px] border border-borderColor px-2.5 sm:px-5 py-5
+        className="bg-black
+          flex items-center rounded uppercase w-fit h-[40px] sm:h-[55px] border border-borderColor px-2.5 sm:px-6 py-5
            text-lg sm:text-2xl text-white font-medium transition-all duration-300 ease-in-out
           disabled:opacity-50 disabled:cursor-not-allowed"
       >
@@ -58,14 +58,14 @@ export function WalletConnection() {
   }
 
   return (
-    <div>
+    <div className="mt-[100px]">
       {!address && (
         <WalletModal open={open} setOpen={setOpen}>
           <button
             onClick={() => setOpen(true)}
-            className={`bg-brandColor
-             flex items-center rounded uppercase mx-auto w-fit h-[40px] sm:h-[50px] px-2.5 sm:px-5 py-5
-             text-lg sm:text-xl text-white font-medium transition-all duration-300 ease-in-out
+            className={`bg-black
+             flex items-center rounded uppercase mx-auto w-fit h-[40px] sm:h-[55px] px-2.5 sm:px-6 py-5
+             text-lg sm:text-2xl text-white font-medium transition-all duration-300 ease-in-out
              ${isConnecting ? "opacity-50 cursor-not-allowed" : ""}`}
           >
             Connect Wallet
@@ -76,9 +76,9 @@ export function WalletConnection() {
         <div className="flex items-center gap-4">
           <button
             onClick={handleDisconnect}
-            className={`bg-brandColor
-                flex items-center rounded uppercase mx-auto w-fit h-[40px] sm:h-[50px] px-2.5 sm:px-5 py-5
-                text-lg sm:text-xl text-white font-semibold transition-all duration-300 ease-in-out
+            className={`bg-black
+                flex items-center rounded uppercase mx-auto w-fit h-[40px] sm:h-[55px] px-2.5 sm:px-6 py-5
+                text-lg sm:text-2xl text-white font-semibold transition-all duration-300 ease-in-out
                 ${isConnecting || isInitialLoading ? "animate-pulse" : ""}`}
           >
             {getDisplayText()}
