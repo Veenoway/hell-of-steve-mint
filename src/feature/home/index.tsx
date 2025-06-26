@@ -310,9 +310,9 @@ export function NFT() {
                           mintingStep === "idle" ||
                           mintingStep === "preparing" ||
                           mintingStep === "confirming"
-                            ? "bg-[#A314B4] hover:bg-opacity-80"
+                            ? "bg-[#836EF9] hover:bg-opacity-80"
                             : mintingStep === "success"
-                            ? "bg-[#241F6F]"
+                            ? "bg-[#836EF9]"
                             : "bg-[#858585] cursor-not-allowed"
                         } 
                          w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3
