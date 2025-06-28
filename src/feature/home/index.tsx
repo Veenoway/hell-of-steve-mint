@@ -428,13 +428,6 @@ export function NFT() {
                             : "ENDED"}
                         </span>
                       </p>
-                      {/* <p className="text-white font-bold text-lg sm:text-[22px] uppercase">
-                    {!isSoldOut && (
-                      <CountdownTimer
-                        currentPhase={mintPhaseInfo?.currentPhase}
-                      />
-                    )}
-                  </p> */}
                     </div>
                   </div>
                 </div>
