@@ -261,21 +261,21 @@ export function NFT() {
           className="h-full w-full absolute top-0 left-0"
         /> */}
         <div className="max-w-[1100px] w-[90%] mx-auto mt-[40px] lg:mt-[40px] flex lg:flex-row flex-col items-center lg:justify-center">
-          <div className="max-w-[800px] w-full flex flex-col lg:items-start items-center text-white font-medium text-xl lg:mt-0 mt-10">
+          <div className="max-w-[1100px] w-full flex flex-col lg:items-start items-center text-white font-medium text-xl lg:mt-0 mt-10">
             <img
               src="/logo.png"
               alt="Spikynads Chad logo"
               className="h-[200px] sm:h-[350px] mx-auto"
             />
 
-            <div className="w-full relative">
+            <div className="w-full relativ flex sm:flex-row flex-col  mt-5 sm:mt-10">
               <img
                 src="/steve.png"
-                alt="Spikynads Chad logo"
-                className="h-[100px] sm:h-[500px] mx-auto absolute sm:-left-[400px] -left-[0px] sm:-top-[120px] -top-[50px]"
+                alt="Steve character"
+                className="h-[200px] sm:h-[350px] lg:h-[400px] w-fit lg:block hidden "
               />
 
-              <div className="w-full flex flex-col items-center justify-center mt-5 sm:mt-10">
+              <div className="w-full flex flex-col items-center justify-center m">
                 {address && isWrongNetwork ? (
                   <button
                     className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"

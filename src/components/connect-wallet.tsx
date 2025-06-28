@@ -58,7 +58,7 @@ export function WalletConnection() {
   }
 
   return (
-    <div className="mt-[100px]">
+    <div className="sm:mt-[100px] mt-[20px]">
       {!address && (
         <WalletModal open={open} setOpen={setOpen}>
           <button
