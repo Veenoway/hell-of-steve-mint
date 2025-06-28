@@ -272,13 +272,13 @@ export function NFT() {
               <img
                 src="/steve.png"
                 alt="Steve character"
-                className="h-[200px] sm:h-[350px] lg:h-[400px] w-fit lg:block hidden "
+                className="h-[200px] sm:h-[350px] lg:h-[450px] w-fit lg:block hidden "
               />
 
               <div className="w-full flex flex-col items-center justify-center m">
                 {address && isWrongNetwork ? (
                   <button
-                    className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
+                    className="bg-[#858585] w-full sm:w-[80%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
                     onClick={handleSwitchNetwork}
                   >
                     Switch Network
@@ -289,7 +289,7 @@ export function NFT() {
                   <WalletModal open={open} setOpen={setOpen}>
                     <button
                       onClick={() => setOpen(true)}
-                      className="bg-[#836EF9] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
+                      className="bg-[#836EF9] w-full sm:w-[80%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3"
                     >
                       Connect Wallet
                     </button>
@@ -299,7 +299,7 @@ export function NFT() {
                 {address && !isWrongNetwork && (
                   <div className="flex items-center flex-col lg:flex-row gap-3 mt-3 w-full mb-0 uppercase">
                     {isSoldOut ? (
-                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
+                      <button className="bg-[#858585] w-full sm:w-[80%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
                         Sold out!
                       </button>
                     ) : userCanMint ? (
@@ -315,7 +315,7 @@ export function NFT() {
                             ? "bg-[#836EF9]"
                             : "bg-[#858585] cursor-not-allowed"
                         } 
-                         w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3
+                         w-full sm:w-[80%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3
                      
                       `}
                           onClick={handleMint}
@@ -346,14 +346,14 @@ export function NFT() {
                         </button>
                       </div>
                     ) : (
-                      <button className="bg-[#858585] w-[60%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
+                      <button className="bg-[#858585] w-full sm:w-[80%] justify-center mx-auto flex items-center rounded h-[60px] sm:h-[85px] py-5 text-4xl uppercase text-white transition-all duration-300 ease-in-out mt-3">
                         MINTED
                       </button>
                     )}
                   </div>
                 )}
 
-                <div className="mt-5 p-4 w-full sm:w-[60%] bg-black/40 rounded-md">
+                <div className="mt-5 p-4 w-full sm:w-[80%] bg-black/40 rounded-md">
                   <div className="flex justify-between items-center mb-3">
                     <div
                       className={`pb-1 rounded-full flex items-center text-lg sm:text-2xl`}
@@ -442,7 +442,7 @@ export function NFT() {
             </div>
           </div>
         </div>
-        <div className="w-[90%] max-w-[1100px] sm:mt-10 mt-5 mx-auto mb-[100px]">
+        <div className="w-[90%] max-w-[1100px] sm:mt-0 mt-5 mx-auto mb-[100px]">
           <UserNFTs />
         </div>
         <img
