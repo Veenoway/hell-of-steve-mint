@@ -5,69 +5,6 @@ import { useNFT } from "@/hooks/useNFTInteraction";
 import { useEffect, useRef, useState } from "react";
 import { useAccount, useSwitchChain } from "wagmi";
 
-// function CountdownTimer({ currentPhase }: { currentPhase?: string }) {
-//   const [timeRemaining, setTimeRemaining] = useState<{
-//     days: number;
-//     hours: number;
-//     minutes: number;
-//     seconds: number;
-//   }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-
-//   useEffect(() => {
-//     const getTargetDate = () => {
-//       const whitelistEndDate = new Date("2025-04-04T13:00:00Z");
-
-//       const fcfsEndDate = new Date("2025-04-05T13:00:00Z");
-
-//       if (currentPhase === "Whitelist" || currentPhase === "OG_SALE") {
-//         return whitelistEndDate;
-//       } else if (currentPhase === "First Come First Served") {
-//         return fcfsEndDate;
-//       }
-
-//       return whitelistEndDate;
-//     };
-
-//     const calculateTimeRemaining = () => {
-//       const targetDate = getTargetDate();
-//       const now = new Date();
-//       const difference = targetDate.getTime() - now.getTime();
-
-//       if (difference <= 0) {
-//         return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-//       }
-
-//       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-//       const hours = Math.floor(
-//         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-//       );
-//       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-//       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-//       return { days, hours, minutes, seconds };
-//     };
-
-//     const timer = setInterval(() => {
-//       setTimeRemaining(calculateTimeRemaining());
-//     }, 1000);
-
-//     setTimeRemaining(calculateTimeRemaining());
-
-//     return () => clearInterval(timer);
-//   }, [currentPhase]);
-
-//   const formatNumber = (num: number) => (num < 10 ? `0${num}` : num);
-
-//   return (
-//     <div className="flex items-center gap-1 sm:gap-2 uppercase">
-//       {timeRemaining.days > 0 && <span>{timeRemaining.days}d</span>}
-//       <span>{formatNumber(timeRemaining.hours)}h</span>
-//       <span>{formatNumber(timeRemaining.minutes)}m</span>
-//       <span>{formatNumber(timeRemaining.seconds)}s</span>
-//     </div>
-//   );
-// }
-
 export function NFT() {
   const { address, chainId, isDisconnected } = useAccount();
   const { switchChainAsync } = useSwitchChain();
