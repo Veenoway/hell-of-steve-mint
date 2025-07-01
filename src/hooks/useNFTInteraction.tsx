@@ -375,19 +375,19 @@ export function useNFT() {
       const refreshSequence = [
         {
           delay: 1000,
-          message: "Premier rafraîchissement immédiat après le mint",
+          message: "First refresh after mint",
         },
         {
           delay: 3000,
-          message: "Deuxième rafraîchissement pour vérifier les métadonnées",
+          message: "Second refresh to check metadata",
         },
         {
           delay: 8000,
-          message: "Troisième rafraîchissement pour confirmer tous les NFTs",
+          message: "Third refresh to confirm all NFTs",
         },
         {
           delay: 15000,
-          message: "Rafraîchissement final pour validation complète",
+          message: "Final refresh for complete validation",
         },
       ];
 
@@ -411,10 +411,7 @@ export function useNFT() {
               }, 10000);
             }
           } catch (error) {
-            console.error(
-              `Erreur pendant le rafraîchissement #${index + 1}:`,
-              error
-            );
+            console.error(`Error during refresh #${index + 1}:`, error);
           }
         }, totalDelay);
       });

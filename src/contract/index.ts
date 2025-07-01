@@ -1,6 +1,5 @@
 export const NFT_ADDRESS =
   "0x6d62F51052f874B5809197A505a4c47Fbd45B4d7" as const;
-// 0x5c7103fDD66802BB39EaB62Ab7465C361f16855b PREVIOUS WITH 5MON GTD PRICE
 // ipfs://bafybeidiovlo375e5dwndoxzuwpica2tby2xu5yizh3cfr5wszdapx63ay/
 export const NFT_ABI = [
   {
