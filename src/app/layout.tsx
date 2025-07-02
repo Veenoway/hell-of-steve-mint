@@ -12,7 +12,7 @@ const poppins = Barriecito({
 });
 
 export const metadata: Metadata = {
-  title: "Hell Of Steve | Mint",
+  title: "Hell Of A Steve | Mint",
   description: "Mint your Hell Of Steve NFTs on Monad testnet.",
 };
 
